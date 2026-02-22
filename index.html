@@ -51,7 +51,7 @@
 
                 <nav class="gap-4 flex my-6">
                     <button id="all-jobs-btn" onclick="unhidePage('all-jobs')"
-                        class="btn border-none bg-white hover:bg-[#3b82f6] active:!bg-[#3b82f6] hover:text-white w-25">All</button>
+                        class="btn border-none bg-[#3b82f6] hover:bg-[#3b82f6] active:!bg-[#3b82f6] text-white hover:text-white w-25">All</button>
                     <button id="interview-btn" onclick="unhidePage('interview')"
                         class="btn border-none bg-white hover:bg-[#3b82f6] active:!bg-[#3b82f6] hover:text-white w-25">Interview</button>
                     <button id="rejected-btn" onclick="unhidePage('rejected')"
@@ -65,128 +65,350 @@
                 <!-- all-jobs -->
                 <div id="all-jobs" class="flex flex-col gap-8">
 
-                    <div id="jobs-1" class="bg-white p-4 job-card">
+                    <article class="bg-white p-4 job-card">
                         <div>
                             <div>
                                 <div class="flex justify-between items-center">
-                                    <h2 class="font-bold text-[17px]">Jobs 1</h2>
-                                    <button id="" class="btn delete-btn">Delete</button>
+                                    <h2 class="font-bold text-[17px]">Frontend Engineer</h2>
+                                    <button class="btn delete-btn hover:bg-red-300">
+                                        <img src="assets/Trash.png" alt="">
+                                    </button>
                                 </div>
-                                <p class="text-sm text-gray-500">React Native Developer</p>
+                                <p class="text-sm text-gray-500">Vue.js Developer</p>
                             </div>
 
-                            <dl id="data-1" class="text-sm text-gray-500 my-5 flex items-center">
-                                <dt class="sr-only">Location:</dt>
-                                <dd>Remote</dd>
-                                <dt class="sr-only">Type:</dt>
+                            <dl class="text-sm text-gray-500 my-5 flex items-center">
+                                <dd>Dhaka</dd>
                                 <dd>Full Time</dd>
-                                <dt class="sr-only">Salary:</dt>
-                                <dd>$130,000 - $175,000</dd>
+                                <dd>$90,000 - $120,000</dd>
                             </dl>
                         </div>
 
                         <div class="flex flex-col space-y-2">
                             <button class="btn bg-[#eef4ff] px-3 text-xs w-27 font-bold">NOT APPLIED</button>
                             <p class="text-sm">
-                                Build cross-platform mobile applications using React Native. Work on products used by
-                                millions of users worldwide.
+                                Develop scalable frontend applications using Vue.js and modern UI frameworks.
                             </p>
 
                             <div class="gap-3 flex mt-2">
                                 <button
                                     class="btn btn-outline btn-success hover:text-white interview-btn">INTERVIEW</button>
-
                                 <button
                                     class="btn btn-outline btn-error hover:text-white rejected-btn">REJECTED</button>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div id="jobs-2" class="bg-white p-4 job-card">
+                    </article>
+
+                    <article class="bg-white p-4 job-card">
                         <div>
                             <div>
                                 <div class="flex justify-between items-center">
-                                    <h2 class="font-bold text-[17px]">Jobs 2</h2>
-                                    <button id="" class="btn delete-btn">Delete</button>
+                                    <h2 class="font-bold text-[17px]">Backend Developer</h2>
+                                    <button class="btn delete-btn hover:bg-red-300">
+                                        <img src="assets/Trash.png" alt="">
+                                    </button>
                                 </div>
-                                <p class="text-sm text-gray-500">React Native Developer</p>
+                                <p class="text-sm text-gray-500">Node.js Engineer</p>
                             </div>
 
-                            <dl id="data-1" class="text-sm text-gray-500 my-5 flex items-center">
-                                <dt class="sr-only">Location:</dt>
+                            <dl class="text-sm text-gray-500 my-5 flex items-center">
                                 <dd>Remote</dd>
-                                <dt class="sr-only">Type:</dt>
                                 <dd>Full Time</dd>
-                                <dt class="sr-only">Salary:</dt>
-                                <dd>$130,000 - $175,000</dd>
+                                <dd>$110,000 - $150,000</dd>
                             </dl>
                         </div>
 
                         <div class="flex flex-col space-y-2">
                             <button class="btn bg-[#eef4ff] px-3 text-xs w-27 font-bold">NOT APPLIED</button>
                             <p class="text-sm">
-                                Build cross-platform mobile applications using React Native. Work on products used by
-                                millions of users worldwide.
+                                Design REST APIs and scalable backend systems using Node.js and Express.
                             </p>
 
                             <div class="gap-3 flex mt-2">
                                 <button
                                     class="btn btn-outline btn-success hover:text-white interview-btn">INTERVIEW</button>
-
                                 <button
                                     class="btn btn-outline btn-error hover:text-white rejected-btn">REJECTED</button>
                             </div>
                         </div>
-                    </div>
-                    
+                    </article>
 
-                    <div id="jobs-3" class="bg-white p-4 job-card">
+                    <article class="bg-white p-4 job-card">
                         <div>
                             <div>
                                 <div class="flex justify-between items-center">
-                                    <h2 class="font-bold text-[17px]">jobs 3</h2>
-                                    <button id="" class="btn delete-btn">Delete</button>
+                                    <h2 class="font-bold text-[17px]">UI/UX Designer</h2>
+                                    <button class="btn delete-btn hover:bg-red-300">
+                                        <img src="assets/Trash.png" alt="">
+                                    </button>
                                 </div>
-                                <p class="text-sm text-gray-500">React Native Developer</p>
+                                <p class="text-sm text-gray-500">Product Designer</p>
                             </div>
 
-                            <dl id="data-1" class="text-sm text-gray-500 my-5 flex items-center">
-                                <dt class="sr-only">Location:</dt>
-                                <dd>Remote</dd>
-                                <dt class="sr-only">Type:</dt>
-                                <dd>Full Time</dd>
-                                <dt class="sr-only">Salary:</dt>
-                                <dd>$130,000 - $175,000</dd>
+                            <dl class="text-sm text-gray-500 my-5 flex items-center">
+                                <dd>Chittagong</dd>
+                                <dd>Contract</dd>
+                                <dd>$70,000 - $95,000</dd>
                             </dl>
                         </div>
 
                         <div class="flex flex-col space-y-2">
                             <button class="btn bg-[#eef4ff] px-3 text-xs w-27 font-bold">NOT APPLIED</button>
                             <p class="text-sm">
-                                Build cross-platform mobile applications using React Native. Work on products used by
-                                millions of users worldwide.
+                                Create intuitive user experiences and interactive prototypes for web products.
                             </p>
 
                             <div class="gap-3 flex mt-2">
                                 <button
                                     class="btn btn-outline btn-success hover:text-white interview-btn">INTERVIEW</button>
-
                                 <button
                                     class="btn btn-outline btn-error hover:text-white rejected-btn">REJECTED</button>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
+                    <article class="bg-white p-4 job-card">
+                        <div>
+                            <div>
+                                <div class="flex justify-between items-center">
+                                    <h2 class="font-bold text-[17px]">DevOps Engineer</h2>
+                                    <button class="btn delete-btn hover:bg-red-300">
+                                        <img src="assets/Trash.png" alt="">
+                                    </button>
+                                </div>
+                                <p class="text-sm text-gray-500">AWS Specialist</p>
+                            </div>
+
+                            <dl class="text-sm text-gray-500 my-5 flex items-center">
+                                <dd>Remote</dd>
+                                <dd>Full Time</dd>
+                                <dd>$120,000 - $160,000</dd>
+                            </dl>
+                        </div>
+
+                        <div class="flex flex-col space-y-2">
+                            <button class="btn bg-[#eef4ff] px-3 text-xs w-27 font-bold">NOT APPLIED</button>
+                            <p class="text-sm">
+                                Maintain CI/CD pipelines and cloud infrastructure using AWS and Docker.
+                            </p>
+
+                            <div class="gap-3 flex mt-2">
+                                <button
+                                    class="btn btn-outline btn-success hover:text-white interview-btn">INTERVIEW</button>
+                                <button
+                                    class="btn btn-outline btn-error hover:text-white rejected-btn">REJECTED</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bg-white p-4 job-card">
+                        <div>
+                            <div>
+                                <div class="flex justify-between items-center">
+                                    <h2 class="font-bold text-[17px]">Data Analyst</h2>
+                                    <button class="btn delete-btn hover:bg-red-300">
+                                        <img src="assets/Trash.png" alt="">
+                                    </button>
+                                </div>
+                                <p class="text-sm text-gray-500">Business Intelligence Analyst</p>
+                            </div>
+
+                            <dl class="text-sm text-gray-500 my-5 flex items-center">
+                                <dd>Dhaka</dd>
+                                <dd>Full Time</dd>
+                                <dd>$85,000 - $115,000</dd>
+                            </dl>
+                        </div>
+
+                        <div class="flex flex-col space-y-2">
+                            <button class="btn bg-[#eef4ff] px-3 text-xs w-27 font-bold">NOT APPLIED</button>
+                            <p class="text-sm">
+                                Analyze datasets and build dashboards to support business decision-making.
+                            </p>
+
+                            <div class="gap-3 flex mt-2">
+                                <button
+                                    class="btn btn-outline btn-success hover:text-white interview-btn">INTERVIEW</button>
+                                <button
+                                    class="btn btn-outline btn-error hover:text-white rejected-btn">REJECTED</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bg-white p-4 job-card">
+                        <div>
+                            <div>
+                                <div class="flex justify-between items-center">
+                                    <h2 class="font-bold text-[17px]">Full Stack Developer</h2>
+                                    <button class="btn delete-btn hover:bg-red-300">
+                                        <img src="assets/Trash.png" alt="">
+                                    </button>
+                                </div>
+                                <p class="text-sm text-gray-500">MERN Stack Developer</p>
+                            </div>
+
+                            <dl class="text-sm text-gray-500 my-5 flex items-center gap-3">
+                                <dd>Remote</dd>
+                                <dd>Full Time</dd>
+                                <dd>$100,000 - $140,000</dd>
+                            </dl>
+                        </div>
+
+                        <div class="flex flex-col space-y-2">
+                            <button class="btn bg-[#eef4ff] px-3 text-xs w-27 font-bold">NOT APPLIED</button>
+                            <p class="text-sm">
+                                Build end-to-end web applications using MongoDB, Express, React, and Node.js.
+                            </p>
+
+                            <div class="gap-3 flex mt-2">
+                                <button
+                                    class="btn btn-outline btn-success hover:text-white interview-btn">INTERVIEW</button>
+                                <button
+                                    class="btn btn-outline btn-error hover:text-white rejected-btn">REJECTED</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bg-white p-4 job-card">
+                        <div>
+                            <div>
+                                <div class="flex justify-between items-center">
+                                    <h2 class="font-bold text-[17px]">QA Engineer</h2>
+                                    <button class="btn delete-btn hover:bg-red-300">
+                                        <img src="assets/Trash.png" alt="">
+                                    </button>
+                                </div>
+                                <p class="text-sm text-gray-500">Quality Assurance Specialist</p>
+                            </div>
+
+                            <dl class="text-sm text-gray-500 my-5 flex items-center gap-3">
+                                <dd>Onsite</dd>
+                                <dd>Full Time</dd>
+                                <dd>$75,000 - $95,000</dd>
+                            </dl>
+                        </div>
+
+                        <div class="flex flex-col space-y-2">
+                            <button class="btn bg-[#eef4ff] px-3 text-xs w-27 font-bold">NOT APPLIED</button>
+                            <p class="text-sm">
+                                Ensure software quality by performing automated and manual tests across platforms.
+                            </p>
+
+                            <div class="gap-3 flex mt-2">
+                                <button
+                                    class="btn btn-outline btn-success hover:text-white interview-btn">INTERVIEW</button>
+                                <button
+                                    class="btn btn-outline btn-error hover:text-white rejected-btn">REJECTED</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bg-white p-4 job-card">
+                        <div>
+                            <div>
+                                <div class="flex justify-between items-center">
+                                    <h2 class="font-bold text-[17px]">Cybersecurity Analyst</h2>
+                                    <button class="btn delete-btn hover:bg-red-300">
+                                        <img src="assets/Trash.png" alt="">
+                                    </button>
+                                </div>
+                                <p class="text-sm text-gray-500">Security Operations</p>
+                            </div>
+
+                            <dl class="text-sm text-gray-500 my-5 flex items-center gap-3">
+                                <dd>Remote</dd>
+                                <dd>Full Time</dd>
+                                <dd>$115,000 - $145,000</dd>
+                            </dl>
+                        </div>
+
+                        <div class="flex flex-col space-y-2">
+                            <button class="btn bg-[#eef4ff] px-3 text-xs w-27 font-bold">NOT APPLIED</button>
+                            <p class="text-sm">
+                                Monitor and respond to cybersecurity threats to protect company infrastructure.
+                            </p>
+
+                            <div class="gap-3 flex mt-2">
+                                <button
+                                    class="btn btn-outline btn-success hover:text-white interview-btn">INTERVIEW</button>
+                                <button
+                                    class="btn btn-outline btn-error hover:text-white rejected-btn">REJECTED</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bg-white p-4 job-card">
+                        <div>
+                            <div>
+                                <div class="flex justify-between items-center">
+                                    <h2 class="font-bold text-[17px]">AI/ML Engineer</h2>
+                                    <button class="btn delete-btn hover:bg-red-300">
+                                        <img src="assets/Trash.png" alt="">
+                                    </button>
+                                </div>
+                                <p class="text-sm text-gray-500">Machine Learning Specialist</p>
+                            </div>
+
+                            <dl class="text-sm text-gray-500 my-5 flex items-center gap-3">
+                                <dd>Hybrid</dd>
+                                <dd>Full Time</dd>
+                                <dd>$130,000 - $170,000</dd>
+                            </dl>
+                        </div>
+
+                        <div class="flex flex-col space-y-2">
+                            <button class="btn bg-[#eef4ff] px-3 text-xs w-27 font-bold">NOT APPLIED</button>
+                            <p class="text-sm">
+                                Design, implement, and deploy machine learning models for real-world applications.
+                            </p>
+
+                            <div class="gap-3 flex mt-2">
+                                <button
+                                    class="btn btn-outline btn-success hover:text-white interview-btn">INTERVIEW</button>
+                                <button
+                                    class="btn btn-outline btn-error hover:text-white rejected-btn">REJECTED</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bg-white p-4 job-card">
+                        <div>
+                            <div>
+                                <div class="flex justify-between items-center">
+                                    <h2 class="font-bold text-[17px]">Cloud Solutions Architect</h2>
+                                    <button class="btn delete-btn hover:bg-red-300">
+                                        <img src="assets/Trash.png" alt="">
+                                    </button>
+                                </div>
+                                <p class="text-sm text-gray-500">AWS / Azure Specialist</p>
+                            </div>
+
+                            <dl class="text-sm text-gray-500 my-5 flex items-center gap-3">
+                                <dd>Onsite</dd>
+                                <dd>Full Time</dd>
+                                <dd>$140,000 - $180,000</dd>
+                            </dl>
+                        </div>
+
+                        <div class="flex flex-col space-y-2">
+                            <button class="btn bg-[#eef4ff] px-3 text-xs w-27 font-bold">NOT APPLIED</button>
+                            <p class="text-sm">
+                                Design and implement scalable cloud architectures for enterprise applications.
+                            </p>
+
+                            <div class="gap-3 flex mt-2">
+                                <button
+                                    class="btn btn-outline btn-success hover:text-white interview-btn">INTERVIEW</button>
+                                <button
+                                    class="btn btn-outline btn-error hover:text-white rejected-btn">REJECTED</button>
+                            </div>
+                        </div>
+                    </article>
                 </div>
 
 
-                <!-- interview cards -->
                 <div id="interview" class="hidden"></div>
-
-                <!-- rejected card -->
                 <div id="rejected" class="hidden"></div>
-
-
             </div>
 
 
@@ -194,13 +416,15 @@
             <!-- no jobs template -->
             <div id="no-jobs" class="hidden">
                 <article class="bg-white flex flex-col justify-center items-center py-35 ">
-                    <img src="jobs.png" alt="">
+                    <img src="assets/jobs.png" alt="">
                     <h2 class="font-bold">No Jobs available</h2>
                     <p class="text-sm text-gray-500">Check back soon for new job opportunities</p>
                 </article>
             </div>
 
+
         </section>
     </main>
 </body>
+
 </html>

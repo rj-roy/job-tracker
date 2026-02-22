@@ -22,9 +22,9 @@ const buttons = document.querySelectorAll(
 
 buttons.forEach(btn => {
     btn.addEventListener("click", () => {
-        buttons.forEach(b => {
-            b.classList.remove("bg-blue-500", "text-white")
-            b.classList.add("bg-white", "text-black");
+        buttons.forEach(clickedd => {
+            clickedd.classList.remove("bg-blue-500", "text-white")
+            clickedd.classList.add("bg-white", "text-black");
         });
 
         btn.classList.add("bg-blue-500", "text-white")
