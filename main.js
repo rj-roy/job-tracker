@@ -10,7 +10,7 @@ function unhidePage(id) {
 
     const selected = document.getElementById(id);
     if (selected) {
-        selected.classList.remove("hidden");
+        selected.classList.remove("hidden")
     }
 };
 
@@ -23,14 +23,14 @@ const buttons = document.querySelectorAll(
 buttons.forEach(btn => {
     btn.addEventListener("click", () => {
         buttons.forEach(b => {
-            b.classList.remove("bg-blue-500", "text-white");
+            b.classList.remove("bg-blue-500", "text-white")
             b.classList.add("bg-white", "text-black");
         });
 
-        btn.classList.add("bg-blue-500", "text-white");
+        btn.classList.add("bg-blue-500", "text-white")
         btn.classList.remove("bg-white", "text-black");
     });
-});
+})
 
 
 
@@ -45,7 +45,7 @@ for (const id of sections) {
 
         clone.classList.remove("hidden");
         section.appendChild(clone);
-    };
+    }
 };
 
 
@@ -56,13 +56,13 @@ function emptyJobs() {
         const NoJobs = section.querySelector("#no-jobs");
         if (NoJobs) {
             NoJobs.remove();
-        };
+        }
 
         if (section.querySelectorAll(".job-card").length === 0) {
             const cloneTemplate = noJobsTemplate.cloneNode(true);
             cloneTemplate.classList.remove("hidden");
             section.appendChild(cloneTemplate);
-        };
+        }
     };
 
 }
@@ -81,7 +81,7 @@ function jobsCount() {
 
 window.addEventListener("DOMContentLoaded", () => {
     jobsCount();
-});
+})
 
 
 // inter.. & reject
@@ -94,7 +94,7 @@ document.addEventListener("click", function (clicked) {
             interviewSection.appendChild(jobs);
             jobsCount();
             emptyJobs();
-        };
+        }
     };
 
     if (clicked.target.classList.contains("rejected-btn")) {
@@ -105,16 +105,27 @@ document.addEventListener("click", function (clicked) {
             rejectedSection.appendChild(jobs);
             jobsCount();
             emptyJobs();
-        };
-    };
+        }
+    }
 
 });
 
 
 
 
+// delete btn
+document.addEventListener('click', function(del){
+    if(del.target.classList.contains("delete-btn")){
+        const jobs = del.target.closest(".job-card");
 
+        if(jobs){
+            jobs.remove()
 
+            jobsCount();
+            emptyJobs();
+        }
+    }
+})
 
 
 
