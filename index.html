@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="bg-[#f8fafc]">
+    <main class="px-3 max-w-7xl mx-auto mt-7">
+        <section>
+            <header class="mb-4">
+                <h1 class="font-bold sm:text-3xl text-xl">Job Application Tracker</h1>
+            </header>
+
+            <div class="grid grid-cols-3 gap-4">
+                <article class="bg-[#ffffff] flex justify-start items-center p-2 px-4">
+                    <p class="grid sm:text-sm text-[10px]">
+                        Total
+                        <output class="font-bold sm:text-2xl text-xl text-black">0</output>
+                    </p>
+                </article>
+
+                <article class="bg-[#ffffff] flex justify-start items-center p-2 px-4">
+                    <p class="grid sm:text-sm text-[10px]">
+                        Interview
+                        <output class="font-bold sm:text-2xl text-xl text-green-500">0</output>
+                    </p>
+                </article>
+
+                <article class="bg-[#ffffff] flex justify-start items-center p-2 px-4">
+                    <p class="grid sm:text-sm text-[10px]">
+                        Rejected
+                        <output class="font-bold sm:text-2xl text-xl text-red-500">0</output>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="mt-14">
+            <header>
+                <div class="flex justify-between">
+                    <h2 class="font-bold text-[17px] sm:text-xl">Available Jobs</h2>
+                    <p class="text-xs sm:text-[16px]">0 jobs</p>
+                </div>
+
+                <nav class="gap-4 flex my-6">
+                    <button id="all-jobs-btn" onclick="unhidePage('all-jobs')"
+                        class="btn border-none bg-white hover:bg-[#3b82f6] active:!bg-[#3b82f6] hover:text-white w-25">All</button>
+                    <button id="interview-btn" onclick="unhidePage('interview')"
+                        class="btn border-none bg-white hover:bg-[#3b82f6] active:!bg-[#3b82f6] hover:text-white w-25">Interview</button>
+                    <button id="rejected-btn" onclick="unhidePage('rejected')"
+                        class="btn border-none bg-white hover:bg-[#3b82f6] active:!bg-[#3b82f6] hover:text-white w-25">Rejected</button>
+                </nav>
+
+            </header>
+
+            <!-- jobs -->
+            <div class="flex flex-col">
+
+                <!-- all-jobs -->
+                <div id="all-jobs" class="flex flex-col gap-8">
+                    <div id="jobs-1" class="bg-white p-4">
+                        <div>
+                            <div>
+                                <div class="flex justify-between items-center">
+                                    <h2 class="font-bold text-[17px]">Mobile First Corp</h2>
+                                    <button id="delete-btn" class="btn">Delete</button>
+                                </div>
+                                <p class="text-sm text-gray-500">React Native Developer</p>
+                            </div>
+
+                            <dl id="data-1" class="text-sm text-gray-500 my-5 flex items-center">
+                                <dt class="sr-only">Location:</dt>
+                                <dd>Remote</dd>
+                                <dt class="sr-only">Type:</dt>
+                                <dd>Full Time</dd>
+                                <dt class="sr-only">Salary:</dt>
+                                <dd>$130,000 - $175,000</dd>
+                            </dl>
+                        </div>
+
+                        <div class="flex flex-col space-y-2">
+                            <button class="btn bg-[#eef4ff] px-3 text-xs w-27 font-bold">NOT APPLIED</button>
+                            <p class="text-sm">
+                                Build cross-platform mobile applications using React Native. Work on products used by
+                                millions of users worldwide.
+                            </p>
+
+                            <div class="gap-3 flex mt-2">
+                                <button
+                                    class="btn btn-outline btn-success hover:text-white interview-btn">INTERVIEW</button>
+
+                                <button
+                                    class="btn btn-outline btn-error hover:text-white rejected-btn">REJECTED</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div id="jobs-1" class="bg-white p-4">
+                        <div>
+                            <div>
+                                <div class="flex justify-between items-center">
+                                    <h2 class="font-bold text-[17px]">Mobile First Corp</h2>
+                                    <button id="delete-btn" class="btn">Delete</button>
+                                </div>
+                                <p class="text-sm text-gray-500">React Native Developer</p>
+                            </div>
+
+                            <dl id="data-1" class="text-sm text-gray-500 my-5 flex items-center">
+                                <dt class="sr-only">Location:</dt>
+                                <dd>Remote</dd>
+                                <dt class="sr-only">Type:</dt>
+                                <dd>Full Time</dd>
+                                <dt class="sr-only">Salary:</dt>
+                                <dd>$130,000 - $175,000</dd>
+                            </dl>
+                        </div>
+
+                        <div class="flex flex-col space-y-2">
+                            <button class="btn bg-[#eef4ff] px-3 text-xs w-27 font-bold">NOT APPLIED</button>
+                            <p class="text-sm">
+                                Build cross-platform mobile applications using React Native. Work on products used by
+                                millions of users worldwide.
+                            </p>
+
+                            <div class="gap-3 flex mt-2">
+                                <button
+                                    class="btn btn-outline btn-success hover:text-white interview-btn">INTERVIEW</button>
+
+                                <button
+                                    class="btn btn-outline btn-error hover:text-white rejected-btn">REJECTED</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="jobs-1" class="bg-white p-4">
+                        <div>
+                            <div>
+                                <div class="flex justify-between items-center">
+                                    <h2 class="font-bold text-[17px]">Mobile First Corp</h2>
+                                    <button id="delete-btn" class="btn">Delete</button>
+                                </div>
+                                <p class="text-sm text-gray-500">React Native Developer</p>
+                            </div>
+
+                            <dl id="data-1" class="text-sm text-gray-500 my-5 flex items-center">
+                                <dt class="sr-only">Location:</dt>
+                                <dd>Remote</dd>
+                                <dt class="sr-only">Type:</dt>
+                                <dd>Full Time</dd>
+                                <dt class="sr-only">Salary:</dt>
+                                <dd>$130,000 - $175,000</dd>
+                            </dl>
+                        </div>
+
+                        <div class="flex flex-col space-y-2">
+                            <button class="btn bg-[#eef4ff] px-3 text-xs w-27 font-bold">NOT APPLIED</button>
+                            <p class="text-sm">
+                                Build cross-platform mobile applications using React Native. Work on products used by
+                                millions of users worldwide.
+                            </p>
+
+                            <div class="gap-3 flex mt-2">
+                                <button
+                                    class="btn btn-outline btn-success hover:text-white interview-btn">INTERVIEW</button>
+
+                                <button
+                                    class="btn btn-outline btn-error hover:text-white rejected-btn">REJECTED</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- interview cards -->
+                <div id="interview" class="hidden">
+
+                </div>
+
+                <!-- rejected card -->
+                <div id="rejected" class="hidden">
+
+                </div>
+            </div>
+
+
+
+            <!-- no jobs template -->
+            <template id="no-jobs">
+                <article class="bg-white flex flex-col justify-center items-center py-35 ">
+                    <img src="jobs.png" alt="">
+                    <h2 class="font-bold">No Jobs available</h2>
+                    <p class="text-sm text-gray-500">Check back soon for new job opportunities</p>
+                </article>
+            </template>
+
+
+        </section>
+    </main>
+</body>
+
+</html>

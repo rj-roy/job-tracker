@@ -1,0 +1,4 @@
+#data-1 dd:not(:last-child)::after {
+    content: "▪️";
+    margin:0 0.5rem;
+}
