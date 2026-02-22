@@ -49,7 +49,7 @@ for (const id of sections) {
 };
 
 
-
+// counting
 function jobsCount() {
     const tAllJobs = document.querySelectorAll("#all-jobs > .job-card").length;
     const tInterview = document.querySelectorAll("#interview > .job-card").length;
@@ -65,7 +65,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
+// inter.. & reject
 document.addEventListener("click", function (clicked) {
     if (clicked.target.classList.contains("interview-btn")) {
         const jobs = clicked.target.closest(".job-card");
@@ -74,10 +74,21 @@ document.addEventListener("click", function (clicked) {
         if (jobs && interviewSection) {
             interviewSection.appendChild(jobs);
             jobsCount();
-        }
-    }
+        };
+    };
+
+    if(clicked.target.classList.contains("rejected-btn")){
+        const jobs = clicked.target.closest(".job-card");
+        const rejectedSection = document.getElementById("rejected");
+k
+        if(jobs && rejectedSection){
+            rejectedSection.appendChild(jobs);
+            jobsCount();
+        };
+    };
 
 });
+
 
 
 
