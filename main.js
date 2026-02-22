@@ -15,43 +15,7 @@ function unhidePage(id) {
 }
 
 
-
-// moving jobs
-const jobs1 = document.getElementById("jobs-1");
-
-// interview-bbb
-document.getElementById("interview-btn").addEventListener('click', function () {
-    const target = document.getElementById("interview");
-    target.append(jobs1);
-})
-
-// rejected-b
-document.getElementById("rejected-btn").addEventListener('click', function () {
-    const target = document.getElementById("rejected");
-    target.append(jobs1);
-})
-
-function jobsDefaultPlace() {
-    const allJobs = document.getElementById("all-jobs");
-    allJobs.append(jobs1);
-}
-
-
-
-
-//delete
-document.getElementById("delete-btn").addEventListener('click', function () {
-    jobs1.remove(jobs1);
-})
-
-
-
-
-
-
-
-
-// bg-eeeee
+// bg of butn-eeeee
 const buttons = document.querySelectorAll(
     "#all-jobs-btn, #interview-btn, #rejected-btn"
 )
@@ -67,6 +31,104 @@ buttons.forEach(btn => {
         btn.classList.remove("bg-white", "text-black");
     });
 });
+
+
+
+
+const sections = ["all-jobs", "interview", "rejected"];
+const noJobsTemplate = document.getElementById("no-jobs");
+
+for(const id of sections){
+    const section = document.getElementById(id);
+    if(section && !section.hasChildNodes()){
+        const clone = noJobsTemplate.cloneNode(true);
+        
+        clone.classList.remove("hidden");
+        section.appendChild(clone);
+    }
+}
+
+
+
+function jobsCount(){
+    const tAllJobs = document.querySelectorAll("#all-jobs > .job-card").length;
+    const tInterview = document.querySelectorAll("#interview > .job-card").length;
+    const tRejected = document.querySelectorAll("#rejected > .job-card").length;
+
+    document.getElementById("total-all").textContent = tAllJobs;
+    document.getElementById("total-interview").textContent = tInterview;
+    document.getElementById("total-rejected").textContent = tRejected;
+}
+
+window.addEventListener("DOMContentLoaded", () =>{
+    jobsCount();
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // moving jobs
+// const jobs1 = document.getElementById("jobs-1");
+
+// // interview-bbb
+// document.getElementById("interview-btn").addEventListener('click', function () {
+//     const target = document.getElementById("interview");
+//     target.append(jobs1);
+// })
+
+// // rejected-b
+// document.getElementById("rejected-btn").addEventListener('click', function () {
+//     const target = document.getElementById("rejected");
+//     target.append(jobs1);
+// })
+
+// function jobsDefaultPlace() {
+//     const allJobs = document.getElementById("all-jobs");
+//     allJobs.append(jobs1);
+// }
+
+
+
+
+// //delete
+// document.getElementById("delete-btn").addEventListener('click', function () {
+//     jobs1.parentNode.removeChild(jobs1);
+// })
+
+
+
+
+
+
+
+
+
 
 
 
@@ -106,10 +168,10 @@ buttons.forEach(btn => {
 
 
 //     // clone template
-//     // const allJobsTemplate = document.getElementById("all-jobs-template");
-//     // const allJobs = document.getElementById("all-jobs");
+//     const allJobsTemplate = document.getElementById("all-jobs-template");
+//     const allJobs = document.getElementById("all-jobs");
 
-//     // const clone = allJobsTemplate.content.cloneNode(true);
+//     const clone = allJobsTemplate.content.cloneNode(true);
 
-//     // allJobs.appendChild(clone);
+//     allJobs.appendChild(clone);
 // })

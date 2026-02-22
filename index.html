@@ -22,21 +22,21 @@
                 <article class="bg-[#ffffff] flex justify-start items-center p-2 px-4">
                     <p class="grid sm:text-sm text-[10px]">
                         Total
-                        <output class="font-bold sm:text-2xl text-xl text-black">0</output>
+                        <output id="total-all" class="font-bold sm:text-2xl text-xl text-black">0</output>
                     </p>
                 </article>
 
                 <article class="bg-[#ffffff] flex justify-start items-center p-2 px-4">
                     <p class="grid sm:text-sm text-[10px]">
                         Interview
-                        <output class="font-bold sm:text-2xl text-xl text-green-500">0</output>
+                        <output id="total-interview" class="font-bold sm:text-2xl text-xl text-green-500">0</output>
                     </p>
                 </article>
 
                 <article class="bg-[#ffffff] flex justify-start items-center p-2 px-4">
                     <p class="grid sm:text-sm text-[10px]">
                         Rejected
-                        <output class="font-bold sm:text-2xl text-xl text-red-500">0</output>
+                        <output id="total-rejected" class="font-bold sm:text-2xl text-xl text-red-500">0</output>
                     </p>
                 </article>
             </div>
@@ -57,7 +57,6 @@
                     <button id="rejected-btn" onclick="unhidePage('rejected')"
                         class="btn border-none bg-white hover:bg-[#3b82f6] active:!bg-[#3b82f6] hover:text-white w-25">Rejected</button>
                 </nav>
-
             </header>
 
             <!-- jobs -->
@@ -65,11 +64,12 @@
 
                 <!-- all-jobs -->
                 <div id="all-jobs" class="flex flex-col gap-8">
-                    <div id="jobs-1" class="bg-white p-4">
+
+                    <div id="jobs-1" class="bg-white p-4 job-card">
                         <div>
                             <div>
                                 <div class="flex justify-between items-center">
-                                    <h2 class="font-bold text-[17px]">Mobile First Corp</h2>
+                                    <h2 class="font-bold text-[17px]">Jobs 1</h2>
                                     <button id="delete-btn" class="btn">Delete</button>
                                 </div>
                                 <p class="text-sm text-gray-500">React Native Developer</p>
@@ -101,13 +101,12 @@
                             </div>
                         </div>
                     </div>
-
                     
-                    <div id="jobs-1" class="bg-white p-4">
+                    <div id="jobs-2" class="bg-white p-4 job-card">
                         <div>
                             <div>
                                 <div class="flex justify-between items-center">
-                                    <h2 class="font-bold text-[17px]">Mobile First Corp</h2>
+                                    <h2 class="font-bold text-[17px]">Jobs 2</h2>
                                     <button id="delete-btn" class="btn">Delete</button>
                                 </div>
                                 <p class="text-sm text-gray-500">React Native Developer</p>
@@ -139,12 +138,13 @@
                             </div>
                         </div>
                     </div>
+                    
 
-                    <div id="jobs-1" class="bg-white p-4">
+                    <div id="jobs-3" class="bg-white p-4 job-card">
                         <div>
                             <div>
                                 <div class="flex justify-between items-center">
-                                    <h2 class="font-bold text-[17px]">Mobile First Corp</h2>
+                                    <h2 class="font-bold text-[17px]">jobs 3</h2>
                                     <button id="delete-btn" class="btn">Delete</button>
                                 </div>
                                 <p class="text-sm text-gray-500">React Native Developer</p>
@@ -176,35 +176,31 @@
                             </div>
                         </div>
                     </div>
-
 
                 </div>
+
 
                 <!-- interview cards -->
-                <div id="interview" class="hidden">
-
-                </div>
+                <div id="interview" class="hidden"></div>
 
                 <!-- rejected card -->
-                <div id="rejected" class="hidden">
+                <div id="rejected" class="hidden"></div>
 
-                </div>
+
             </div>
 
 
 
             <!-- no jobs template -->
-            <template id="no-jobs">
+            <div id="no-jobs" class="hidden">
                 <article class="bg-white flex flex-col justify-center items-center py-35 ">
                     <img src="jobs.png" alt="">
                     <h2 class="font-bold">No Jobs available</h2>
                     <p class="text-sm text-gray-500">Check back soon for new job opportunities</p>
                 </article>
-            </template>
-
+            </div>
 
         </section>
     </main>
 </body>
-
 </html>
