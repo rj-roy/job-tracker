@@ -92,6 +92,7 @@ document.addEventListener("click", function (clicked) {
 
         if (jobs && interviewSection) {
             interviewSection.appendChild(jobs);
+            document.getElementById("uuuu").classList.add("bg-[#00d390]", "text-white");
             jobsCount();
             emptyJobs();
         }
@@ -103,6 +104,7 @@ document.addEventListener("click", function (clicked) {
         
         if (jobs && rejectedSection) {
             rejectedSection.appendChild(jobs);
+            document.getElementById("rrrr").classList.add("bg-[#ff627d]", "text-white");
             jobsCount();
             emptyJobs();
         }
